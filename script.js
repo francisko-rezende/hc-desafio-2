@@ -1,12 +1,3 @@
-// const localStorageCustomers = localStorage.getItem("customers");
-
-// const updateLocalStorage = () => {
-//   localStorage.setItem("customers", JSON.stringify(customers));
-// };
-
-// let customers =
-//   localStorage.getItem("customers") !== null ? localStorageCustomers : [];
-
 const customerForm = document.getElementById("customerForm");
 
 customerForm.addEventListener("submit", (event) => {
@@ -38,4 +29,35 @@ customerForm.addEventListener("submit", (event) => {
   let content = document.getElementById("customerFormContainer");
 
   content.innerHTML = `Cliente cadastrado!`;
+});
+
+const productForm = document.getElementById("productForm");
+
+productForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let productArray = [];
+
+  localStorage.getItem("products") !== null
+    ? (productArray = JSON.parse(localStorage.getItem("products")))
+    : productArray;
+
+  let name = document.getElementById("productName").value;
+  let quantity = document.getElementById("productQuantity").value;
+
+  let product = {
+    category: "product",
+    name: name,
+    quantity: quantity,
+  };
+
+  productArray.push(product);
+
+  let convertData = JSON.stringify(productArray);
+
+  localStorage.setItem("products", convertData);
+
+  let content = document.getElementById("productContainer");
+
+  content.innerHTML = `Produto cadastrado!`;
 });
