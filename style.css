@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-light: #e7eefb;
+    --color-red: #b9000b;
+}
+
+body,
+h1,
+h2,
+h3,
+figure {
+    margin: 0;
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.footer {
+    background-color: var(--color-light);
+    height: 48px;
+    text-align: center;
+}
+
+#customerFormContainer, #productContainer {
+    background-color: var(--color-red);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+#customerForm, #productForm {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+
+}
+
+h2 {
+    color: var(--color-light);
+    font-family: 'Lora', serif;
+    font-size: 32px;
+}
+
+button {
+    background-color: var(--color-light);
+    border-radius: 5px;
+}
+
+:root {
+    background-color: var(--color-light);
+}
